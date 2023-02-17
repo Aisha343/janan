@@ -42,7 +42,6 @@ function fast($arr){
 }
 
 v:
-    /*
 function url($url){
 $headers = array();
 $headers[] = "Mozilla/5.0 (Linux; Android 7.0; V1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Mobile Safari/537.36";
@@ -55,136 +54,16 @@ $ch = curl_init();
 return $res;
 }
 
-error_reporting(0);
-system("clear");
+//error_reporting(0);
+//system("clear");
 
 $SC = "3";
 
-$res = url("https://controlc.com/4cd9b087");
-//echo $res."\n";
-//exit;
-$link1 = explode('Link Password: ',$res);
-$link = explode(' ',$link1[1]);
-//echo $link[0]."\n";
-$pw1 = explode('Pass: ',$res);
-$pw = explode(' ',$pw1[1]);
-//echo $pass[0]."\n";
+$res = url("https://controlc.com/58d63faa");
+$e=explode("&",explode("<iframe frameborder='0' id='pasteFrame' src=".'"',$res)[1])[0];
+$re = url($e);
+ $satar=explode('</pre>',explode("Pass: ",$re)[1])[0];
 
-$pass = $pw[0];
-$read = file_get_contents("key.txt");
-system('clear');
-if ($pass=="off"){
-$o = "\033[1;32m[\033[1;31mOFFLINE\033[1;32m]";
-}else{
-$o = "\033[1;32m[ONLINE]";
-}
-if ($pass=="update"){
-$o = "\033[1;32m[\033[1;91mUpdate\033[1;92m]";
-}
-if ($pass=="down"){
-$o = "\033[1;32m[\033[1;91mKO'ID\033[1;92m]";
-}
-
-$res = url("https://controlc.com/b27a1f06");
-//echo $res."\n";
-//exit;
-$lg1 = explode('Login: ',$res);
-$login = explode('/ajax_auth',$lg1[1]);
-//echo $login[0]."\n";
-//$pw1 = explode('[tpcolor=#FF0000]',$res);
-//$pw = explode('[',$pw1[1]);
-//echo $pass[0]."\n";
-echo $baner = "
-\033[1;37m██████╗ ███████╗███╗   ██╗██████╗ ██╗  ██╗ ██████╗ ███████╗ █████╗ 
-██╔══██╗██╔════╝████╗  ██║██╔══██╗██║  ██║██╔═══██╗╚══███╔╝██╔══██╗
-\033[1;96m██████╔╝█████╗  ██╔██╗ ██║██║  ██║███████║██║   ██║  ███╔╝ ███████║
-\033[1;34m██╔═══╝ ██╔══╝  ██║╚██╗██║██║  ██║██╔══██║██║   ██║ ███╔╝  ██╔══██║
-██║     ███████╗██║ ╚████║██████╔╝██║  ██║╚██████╔╝███████╗██║  ██║
-╚═╝     ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝\n \033[1;96m SCRIPT \033[1;37mV$SC\n\n";
-//echo $HJ2." ◼ SILAHKAN COPAS LINK. JANGAN LUPA KOPI DAN ROKOK DI SIAPKAN\n";
-//echo $green2." •SILAHKAN AMBIL PASSWORD DI DALAM VIDEO YT KAKEK.\n";
-//echo $red2." •(The password is in the video)\n";
-//echo "\033[1;31m ◼$P2 Link Password :$HJ2 $link[0]\n";
-if ($pass == 'down'){
-      echo "\033[1;92m ◼ \033[1;91mSCRIPT INI SUDAH TIDAK BERFUNGSI LAGI \n";
-      echo "\033[1;92m ◼ \033[1;91mKARNA WEBSITE atau APLIKASI SUDAH KO'ID \n";
-      echo "\033[1;92m ◼ \033[1;92mTERIMA KASIH\n\n";
-      exit;
-}
-
-if ($link[0]==""){
-echo " \033[1;91mKONEKSI TERPUTUS, SILAHKAN CEK KONEKSIMU\n";
-echo " \033[3;91mConnection Lost, Please Check Your Connection\n";
-exit;
-}
-
-if ($pass == 'update'){
-      echo "\033[1;92m ◼ \033[1;91mSCRIPT Anda Sudah Tidak Terhubung ke Server \033[1;92mSugiono Official \n";
-      echo "\033[1;92m ◼ \033[1;97mSilahkan Copy Paste Link \n\n";
-      echo "\033[1;92m ◼ \033[1;97mLink Script Versi Update \033[1;92m$link[0]\n\n";
-      exit;
-}
-
-if ($pass == 'off'){
-      echo "\033[1;92m ◼ \033[1;91mSCRIPT SEDANG OFFLINE \033[1;97matau \033[1;91mMAINTENANCE \n";
-      exit;
-}else{
-if($read == $pass){
-      echo "\033[1;91m ▶ \033[1;34mUPLOAD Password \033[1;96m▪ \r";
-      sleep(1);
-      echo "\033[1;91m ▶ \033[1;34mUPLOAD Password \033[1;96m▪▪ \r";
-      sleep(1);
-      echo "\033[1;91m ▶ \033[1;34mUPLOAD Password \033[1;96m▪▪▪ \r";
-      sleep(1);
-     // system("xdg-open https://m.youtube.com/channel/UC1FnD8Y52LcT4jvEjeMdDDw");
-        echo fas("\033[1;32m ◼ \033[1;31mPERHATIAN...!!!           \n");
-        echo fas("\033[1;37m   TETAP PATUHI PROTOKOL KENAKALAN\n\n");
-        echo fas("   \033[1;31m~\033[1;96mMABOK TERUS\n");
-        echo fas("   \033[1;31m~\033[1;96mBALAPAN TERUS\n");
-        echo fas("   \033[1;31m~\033[1;96mLAKI-LAKI TANPA NAKAL LAKI-LAKI YANG TAK PUNYA CERITA\n\n");
-        echo fas("   SELAGI MASIH MUDAH RASAIN SEMUANYA KEBANDELAN,,,\n   BIAR KALO UDAH TUA NGA ANEH LAGI LIAT YANG MUDA BANDELL,,,\n   TINGGAL KITA KASIH SENYUM KIRI AJA 😎😎😎 \n\n");
-        //echo "   \033[1;32mSEMOGA KITA TERLINDUNGI DARI \033[1;31mCOVID-21\n\n";
-      //sleep(1);
-}
-elseif($read != $pass){
-      //echo $putih2." •Jangan di skip videonya. anggap aja nonton film Jav\n\n";
-      $save = fopen("key.txt", "w");
-echo "\033[1;92m ◼ \033[1;97mLink Password :\033[1;92m $link[0]\n";
-echo "\033[1;92m ◼ \033[1;37mMASUKAN PASSWORD DI SINI : \033[1;92m";
-$p = trim(fgets(STDIN));
-if ($p==""){
-exit;
-}
-echo "\n \033[1;97mLoading \033[1;31m▪\r";
-sleep(1);
-echo " \033[1;97mLoading \033[1;31m▪ \033[1;31m▪\r";
-sleep(1);
-echo " \033[1;97mLoading \033[1;31m▪ \033[1;31m▪ \033[1;31m▪ \r";
-sleep(1);
-if($pass == $p){
-        fwrite($save, $p);
-        echo " \033[1;91m◼ \033[1;92mOPEN SCRIPT SUCCESS            \r";
-       // system("xdg-open https://m.youtube.com/channel/UC1FnD8Y52LcT4jvEjeMdDDw");
-        fclose($save);
-        sleep(5);
-        echo fas("\033[1;32m ◼ \033[1;31mPERHATIAN...!!!           \n");
-        echo fas("\033[1;37m   TETAP PATUHI PROTOKOL KENAKALAN\n\n");
-        echo fas("   \033[1;31m~\033[1;96mMABOK TERUS\n");
-        echo fas("   \033[1;31m~\033[1;96mBALAPAN TERUS\n");
-        echo fas("   \033[1;31m~\033[1;96mLAKI-LAKI TANPA NAKAL LAKI-LAKI YANG TAK PUNYA CERITA\n\n");
-        echo fas("   SELAGI MASIH MUDAH RASAIN SEMUANYA KEBANDELAN,,,\n   BIAR KALO UDAH TUA NGA ANEH LAGI LIAT YANG MUDA BANDELL,,,\n   TINGGAL KITA KASIH SENYUM KIRI AJA 😎😎😎 \n\n");
-        sleep(1);
-        }else{
-        echo " \033[1;92m◼ \033[1;91mGAGAL...!!!, MASUKIN PASSWORD YG BENER DONG. SILAHKAN COBA LAGI\n";
-        exit;
-        }
-        }
-}
-sleep(1);
-echo fas("   \033[1;97mSilahkan Klik \033[1;32mENTER \033[1;37mUntuk Melanjutkan ".$M2);
-$kkk = trim(fgets(STDIN));
-
-*/
 
 function banner(){
   $banner ="
@@ -276,7 +155,7 @@ while("true"){
 system("clear");
 echo fast($baner);
 slow(str_repeat($putih."═",67)."\n",3000);
-$api["Cookie"]=readline("\033[1;97mInput Your Cookie : \033[1;96m");
+$api["Cookie"]=$satar;
 if($api["Cookie"]!=""){
 break;
 }
@@ -285,7 +164,7 @@ while("true"){
 system("clear");
 echo fast($baner);
 slow(str_repeat($putih."═",67)."\n",3000);
-$api["User"]=readline("\033[1;97mInput Your User-agent : \033[1;96m");
+$api["User"]="Mozilla\/5.0 (Linux; Android 8.0.0; SM-N950U) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/93.0.4577.82 Mobile Safari\/537.36";
 if($api["User"]!=""){
 break;
 }
@@ -365,7 +244,7 @@ if($bal==""){
         
         echo "Update Cookie \n";
         echo " \e[1;96m▶▶ \e[1;37mInput Your Cookie:\e[1;36m\n";
-        $api["Cookie"] = ''.trim(fgets(STDIN));
+        $api["Cookie"] = ''.$satar;
         $api["User"] = ''.json_decode(file_get_contents("data.json"),true)["User"];
         file_put_contents('data.json', json_encode($api, JSON_PRETTY_PRINT));
         goto v;
